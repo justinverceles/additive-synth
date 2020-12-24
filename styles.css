@@ -1,0 +1,151 @@
+
+html {font-size: 1.2vw;}
+
+body {
+  margin: 0;
+  
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#keys {
+  display: flex;
+  position: relative;
+}
+
+button {
+  appearance: none;
+  background-color: rgb(239, 239, 239);
+  border: 0.3rem lightgray outset;
+  box-shadow: 0 0 0.5rem gray;
+}
+
+.white {
+  width: 4rem;
+  height: 15rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.black {
+  background-color: gray;
+  width: 2.5rem;
+  height: 9rem;
+  border-color: rgb(71, 71, 71);
+  box-shadow: 0 0 0.5rem rgb(41, 41, 41);
+}
+
+#harms {
+  position: relative;
+  display: flex;
+  width: 59.4rem;
+  height: 15.6rem;
+  border: 0.3rem outset lightgray;
+  box-shadow: 0 0 0.5rem gray;
+}
+
+.harm, .fund {
+  box-sizing: border-box;
+  appearance: none;
+  border: 0.3rem outset lightgray;
+  background-color: rgb(239, 239, 239);
+  width: calc(59.4rem / 16);
+  height: 0;
+  margin-top: 15rem;
+}
+
+.fund {
+  margin-top: 0;
+  height: 15.6rem;
+}
+
+.harmScreens {
+  position: absolute;
+  display: flex;
+  align-items: stretch;
+  left: calc(59.4rem / 16);
+  width: calc((59.4rem / 16) * 15);
+  height: 15.6rem;
+}
+
+.harmScreens div {
+  top: 0;
+  box-sizing: border-box;
+  margin-top: 0;
+  width: calc(59.4rem / 15);
+}
+
+#keys .black {position: absolute}
+#keys :nth-child(15) {left: calc((12rem - 2.5rem * 2) / 3)} 
+#keys :nth-child(16) {left: calc((12rem - (12rem - 2.5rem * 2) / 3 - 2.5rem))}
+#keys :nth-child(17) {left: calc(12rem + ((16rem - 2.5rem * 3) / 4))}
+#keys :nth-child(18) {left: calc(12rem + ((16rem - 2.5rem * 3) / 4) * 2 + 2.5rem)}
+#keys :nth-child(19) {left: calc(12rem + 16rem - (16rem - 2.5rem * 3) / 4 - 2.5rem)}
+#keys :nth-child(20) {left: calc(12rem + 16rem + (12rem - 2.5rem * 2) / 3)}
+#keys :nth-child(21) {left: calc(12rem + 16rem + (12rem - (12rem - 2.5rem * 2) / 3 - 2.5rem))}
+#keys :nth-child(22) {left: calc(12rem + 16rem + 12rem + ((16rem - 2.5rem * 3) / 4))}
+#keys :nth-child(23) {left: calc(12rem + 16rem + 12rem + ((16rem - 2.5rem * 3) / 4) * 2 + 2.5rem)}
+#keys :nth-child(24) {left: calc(12rem + 16rem + 12rem + 16rem - (16rem - 2.5rem * 3) / 4 - 2.5rem)}
+
+
+button {
+  outline: none;
+}
+
+
+#help {
+  font-size: 1.5rem;
+  font-family: Courier, monospace;
+  font-weight: bold;
+  color: rgb(107, 107, 107);
+  margin-top: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+#map {
+  width: 59.4rem;
+  border: 0.3rem outset lightgray;
+  background-color: rgb(239, 239, 239);
+  box-shadow: 0 0 0.5rem gray;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#map-wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.1s ease-in, margin-bottom 0.1s ease-in;
+  transition-delay: 0, 0;
+}
+
+#map div {
+  box-sizing: border-box;
+  background-color: rgb(239, 239, 239);
+  border: 0.3rem lightgray outset;
+  box-shadow: 0 0 0.5rem gray;
+
+  display: inline-block;
+  width: calc(59.4rem / 15);
+  height: calc(59.4rem / 15);
+  font-size: 1.5rem;
+  font-family: Courier, monospace;
+  font-weight: bold;
+  color: rgb(107, 107, 107);
+  line-height: 0;
+  text-align: center;
+  padding: 1.6rem 0;
+}
+#map :nth-child(14) {width: calc(59.4rem * 2 / 15)}
+#map :nth-child(15),
+#map :nth-child(28) {width: calc(59.4rem * 1.5 / 15)}
+#map :nth-child(29) {width: calc(59.4rem * 1.75 / 15)}
+#map :nth-child(41),
+#map :nth-child(42) {width: calc(59.4rem * 2.25 / 15)}
+#map :nth-child(53) {width: calc(59.4rem * 2.75 / 15)}
